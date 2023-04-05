@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="lib/maptastic.js"></script>
+    <script src="maptastic.js"></script>
     <style>
       body {
         margin: 0;
@@ -24,7 +24,22 @@
       [contenteditable] {
         outline: 0px solid transparent;
       }
+
+      #wrap {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
+
+    <script>
+      function go(url) {
+        document.getElementById("stretch").src = url;
+      }
+    </script>
   </head>
 
   <body>
@@ -84,6 +99,7 @@
         cursor: default;
       "
     ></canvas>
+    <!-- <input class="input" type="text" onchange="go(this.value)" placeholder="https://antiph.onl" name="link" size="100" contenteditable="true" required> -->
 
     <script>
       function go(url) {
